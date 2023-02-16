@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+.register-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  font-family: "Saira Condensed";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.register-inner {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  height: 90vh;
+}
+
+.register-sub1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  background-color: #0957ac;
+  border-radius: 20px 0px 0px 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.register-sub1 h3 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #F4D35E;
+  font-size: 70px;
+}
+
+.register-sub1 p {
+  margin-top: 0px;
+  font-size: 24px;
+}
+
+.register-sub2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:50%;
+  background-color: #083D77;
+  border-radius: 0px 20px 20px 0px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.register-sub2 img {
+	height: 600px;
+	width: 600px;
+	padding-right: 70px;
+}
+
+#error-message,
+#success-message {
+  font-size: 20px;
+  text-align: center;
+  /* animation: fadeOut 1s forwards; */
+}
+
+#success-message {
+  color: rgb(0, 255, 0);
+}
+
+#error-message {
+  color: gold;
+}
+
+/* @keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+} */
+
+@media screen and (max-width: 800px) {
+  .register-sub1 {
+    border-radius: 20px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .register-sub1 h3 {
+    font-size: 32px;
+  }
+
+  .register-sub1 p {
+    font-size: 15px;
+  }
+
+  .register-sub2 {
+    display: none;
+  }
+
+  #error-message,
+  #success-message {
+    font-size: 16px;
+  }
+}

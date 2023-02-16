@@ -1,0 +1,42 @@
+.Nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100px;
+	background-color: #083D77;
+	
+}
+
+.Nav a {
+	color: #F4D35E;
+	text-decoration: none;
+
+}
+
+.Sub1 {
+	width: 30%;
+	/* background-color: #000; */
+}
+
+.Sub1 a img {
+	width: 140px;
+	height: 130px;
+	/* background-color: #000; */
+}
+
+.Sub2 {
+	display: flex;
+	justify-content: space-between;
+	width: 40%;
+	/* background-color: #fff; */
+	font-size: 24px;
+}
+
+.Sub3 {
+	display: flex;
+	justify-content: center;
+	width: 30%;
+	/* background-color: red; */
+	font-size: 24px;
+}
