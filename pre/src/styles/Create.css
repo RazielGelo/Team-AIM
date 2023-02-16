@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+
+.create-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  font-family: "Saira Condensed";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.create-sub1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: #0957ac;
+}
+
+.create-sub1 h3 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color: #f4d35e;
+  font-size: 50px;
+}
+
+.create-sub1 p {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.create-sub2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  background-color: #083d77;
+}
+
+.create-sub2 img {
+  height: 600px;
+  width: 600px;
+  padding-right: 70px;
+}
+
+.create-gender img {
+	border-radius: 20px;
+	margin-right: 20px;
+	box-shadow: 0px 0px 0px 2px #083d77 inset;
+	transition: box-shadow 0.2s ease-in-out;
+  }
+
+.create-gender input:checked + img {
+  box-shadow: 10px 10px 4px #04203f;
+}
+
+.create-gender {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 400px;
+  margin-bottom: 20px;
+}
+.create-gender p {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+#create-error-message,
+#create-success-message {
+  font-size: 20px;
+  text-align: center;
+  /* animation: fadeOut 1s forwards; */
+}
+
+#create-success-message {
+  color: rgb(0, 255, 0);
+}
+
+#create-error-message {
+  color: gold;
+}
