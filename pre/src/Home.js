@@ -1,16 +1,25 @@
+// React imports
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
+// Components
+import InputSearch from "./components/InputSearch";
+import YellowButton from "./components/YellowButton";
 import Nav from "./components/Nav";
 import Carousel from "./components/Carousel";
 import ViewCard from "./components/ViewCard";
-import InputSearch from "./components/InputSearch";
-import YellowButton from "./components/YellowButton";
+
+// CSS
 import "./styles/Home.css";
+
+// Logos
 import magnifyLogo from "./images/magnify.png";
 
 function Home() {
   const [filteredRequest, setfilteredRequest] = useState([]);
   const sessionEmail = JSON.parse(localStorage.getItem("session")).email;
+  const [searchText, setsearchText] = useState("");
+
 
   let navigate = useNavigate();
 
@@ -45,26 +54,38 @@ function Home() {
 
       <div className="home-sub1">
         <p>FIND A REQUEST</p>
-        <InputSearch type="search" logo={magnifyLogo} />
+        <InputSearch
+          type="search"
+          logo={magnifyLogo}
+          value={searchText}
+          onChange={(e) => setsearchText(e.target.value)}
+        />
         <YellowButton onClick={handleCreate}>Create Request</YellowButton>
       </div>
 
       <div className="home-sub2">
         <div className="home-carousel">
           <Carousel>
-            {filteredRequest.filter((request) => request.status === "waiting")
-			.map((request, index) => (
-              <ViewCard
-                key={request.email + index}
-                email={request.email}
-                taskName={request.taskName}
-                difficulty={request.difficulty}
-                details={request.details}
-                onButtonClick={() =>
-                  handleViewClick(request.email, request.taskName)
-                }
-              />
-            ))}
+            {filteredRequest
+              .filter((request) =>
+                [request.taskName, request.difficulty, request.details]
+                  .join("")
+                  .toLowerCase()
+                  .includes(searchText.toLowerCase())
+              )
+              .filter((request) => request.status === "waiting")
+              .map((request, index) => (
+                <ViewCard
+                  key={request.email + index}
+                  email={request.email}
+                  taskName={request.taskName}
+                  difficulty={request.difficulty}
+                  details={request.details}
+                  onButtonClick={() =>
+                    handleViewClick(request.email, request.taskName)
+                  }
+                />
+              ))}
           </Carousel>
         </div>
       </div>
