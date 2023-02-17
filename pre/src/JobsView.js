@@ -140,31 +140,7 @@ function JobsView() {
               </ol>
             </div>
           )}
-        </Popup>
-        {/* <Popup
-          trigger={<YellowButton>Get Directions</YellowButton>}
-          onOpen={(e) => {
-            getDirectionsClicked();
-          }}
-          position="right center"
-        >
-          {steps && (
-            <div className="popupContent">
-              <p>
-                <strong>Trip duration: {duration} min 🏎️</strong>
-              </p>
-              <ol>
-                {steps.map((step, index) => {
-                  return (
-                    <li className="list" key={index}>
-                      {step.maneuver.instruction}
-                    </li>
-                  );
-                })}
-              </ol>
-            </div>
-          )}
-        </Popup> */}
+        </Popup>        
       </div>
     </div>
   );
