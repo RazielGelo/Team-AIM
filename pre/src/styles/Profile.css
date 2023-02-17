@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+
+.profile-container {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0957ac;
+
+  font-family: "Saira Condensed";
+  font-style: normal;
+  font-weight: 400;
+  padding-bottom: 50px;
+}
+
+.profile-sub1 {
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* background-color: #fff; */
+	margin-top: 10px;
+	width: 700px;
+	height: auto;	
+
+}
+
+.profile-sub1 h3 {
+	height: 100px;
+	font-size: 74px;
+	color: #F4D35E;
+	margin: 0px;
+
+}
+
+.profile-sub1 p {
+	margin: 0px;
+	font-size: 20px;
+	color: #fff;
+	margin-bottom: 20px;
+
+}
+
+.profile-sub1 .YellowButton {
+	margin-top: 30px;
+}
+
+.profile-gender {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 400px;
+	margin-bottom: 20px;
+  }
+  .profile-gender p {
+	font-size: 20px;
+	margin-right: 20px;
+  }
+
+.profile-gender img {
+	border-radius: 20px;
+	margin-right: 20px;
+	box-shadow: 0px 0px 0px 2px #083d77 inset;
+	transition: box-shadow 0.2s ease-in-out;
+  }
+
+.profile-gender input:checked + img {
+  box-shadow: 10px 10px 4px #04203f;
+}
+
+.profile-sub2 {
+	display: flex;
+	width: 50%;
+	justify-content: space-between;
+	align-items: flex-start;
+	/* background-color: #000; */
+
+}

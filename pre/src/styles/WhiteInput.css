@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap');
+
+
+.WhiteInput {
+  width: 425px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: #fff;
+
+  margin-bottom: 30px;
+}
+
+.WhiteInput img {
+  width: auto;
+  height: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.WhiteInput input {
+  flex-grow: 1;
+  outline: none;
+  border: none;
+  padding: 0px;
+  background-color: #fff;
+  color: black;
+
+  font-family: 'Saira Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.WhiteInput input::placeholder {
+  color: black;
+}
+
+.WhiteInput input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+@media screen and (max-width: 800px) {
+  .WhiteInput {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 45px;
+    border: none;
+    background-color: #fff;
+
+    margin-bottom: 30px;
+  }
+
+  .WhiteInput img {
+	width: 21px;
+	height: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+  }
+
+  .WhiteInput input {
+    width: 180px;
+    font-size: 16px;
+  }
+
+  .WhiteInput input::placeholder {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap');
+
+
+.YellowButton {
+  width: 150px;
+  height: 38px;
+  color: #2777CD;
+  background-color: #F4D35E;
+  border-radius: 45px;
+  border: none;
+  cursor: pointer;
+
+  font-family: 'Saira Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+@media screen and (max-width: 1000px) {
+  .YellowButton {
+    width: 191px;
+    height: 54px;
+    font-size: 16px;
+  }
+}
