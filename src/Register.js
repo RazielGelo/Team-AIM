@@ -129,6 +129,9 @@ function Register() {
     <div className="register-container">
       <div className="register-inner">
         <div className="register-sub1">
+          <div className="logores">
+            <img src={preLogo} alt="pre" />
+          </div>
           <h3>REGISTER</h3>
           {showErrorMessage && <p id="error-message">{errorMessage}</p>}
           {showSuccessMessage && <p id="success-message">{successMessage}</p>}
