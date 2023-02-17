@@ -1,10 +1,17 @@
-import "./styles/Request.css";
+// React imports
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Textarea from "./components/Textarea";
-import Nav from "./components/Nav";
+
+// Components
 import WhiteInput from "./components/WhiteInput";
 import YellowButton from "./components/YellowButton";
+import Textarea from "./components/Textarea";
+import Nav from "./components/Nav";
+
+// CSS
+import "./styles/Request.css";
+
+// Logos
 import taskLogo from "./images/task.png";
 
 function Request() {
@@ -14,11 +21,11 @@ function Request() {
   const [errorMessage, setErrorMessage] = useState("");
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
-  const [filteredAccount, setfilteredAccount] = useState([]);
   const [taskName, setTaskName] = useState("");
   const [details, setDetails] = useState("");
 
   let navigate = useNavigate();
+
   useEffect(() => {
     const session = JSON.parse(localStorage.getItem("session"));
     if (!session) {
@@ -101,10 +108,19 @@ function Request() {
           taskName: uniqueTaskName,
           difficulty: selectedValue,
           details: details,
-          applications: [],
+          applications: [
+			...(session.applications || [])
+		  ],
           status: "waiting",
+          email: session.email,
+          name: session.name,
+          ethnicity: session.ethnicity,
+          gender: session.gender,
+          age: session.age,
+          phoneNumber: session.phoneNumber,
         },
       ],
+	  jobs: []
     };
 
     const filteredAccounts = accounts.filter(

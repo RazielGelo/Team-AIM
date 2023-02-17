@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+
+.jobs-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0957ac;
+
+  font-family: "Saira Condensed";
+  font-style: normal;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+.jobs-sub1 {
+  display: flex;
+  width: 80%;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: #000; */
+  margin-left: 150px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.jobs-sub1 h1 {
+	font-size: 60px;
+	color: #F4D35E;
+	margin: 0px;
+}
+
+.jobs-sub2 {
+	/* background-color: #000; */
+	margin-left: 50px;
+
+}
+
+
+.jobs-carousel {
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+}

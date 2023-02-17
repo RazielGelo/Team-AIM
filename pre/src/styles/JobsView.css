@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+
+.jobsview-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0957ac;
+
+  font-family: "Saira Condensed";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.jobsview-sub1 {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  color: #fff;
+  /* background-color: #000; */
+}
+
+.jobsview-sub1 h1 {
+  font-size: 60px;
+  margin-bottom: 0px;
+  color: #f4d35e;
+}
+
+.jobsview-sub1 p {
+  font-size: 24px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.jobsview-sub1 p span {
+  color: #f4d35e;
+}
+
+#description {
+  color: #f4d35e;
+}
+
+.jobsview-buttons {
+  display: flex;
+  width: 350px;
+  margin-top: 10px;
+  /* background-color: #000; */
+  justify-content: space-between;
+}
+
+.jobsview-buttons button {
+  width: 150px;
+  height: 38px;
+  color: #2777cd;
+  background-color: #f4d35e;
+  border-radius: 45px;
+  border: none;
+  cursor: pointer;
+
+  font-family: "Saira Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* https://popupsmart.com/blog/react-popup */
+.popupContent {
+  margin: auto;
+  width: auto;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.popup-arrow {
+  color: #fff;
+}
+
+[role="tooltip"].popup-content {
+  width: auto;
+  box-shadow: #ef86f2 5px 5px 5px;
+}
+
+.popup-overlay {
+  background: transparent;
+}
+
+[data-popup="tooltip"].popup-overlay {
+  background: transparent;
+}

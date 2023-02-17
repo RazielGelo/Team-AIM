@@ -9,3 +9,4 @@ const WhiteInput = ({ type = "text", value, onChange, style, logo, placeholder, 
 );
 
 export default WhiteInput;
+

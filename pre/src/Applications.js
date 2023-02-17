@@ -1,9 +1,13 @@
-
+// React imports
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
+// Components
 import Nav from "./components/Nav";
 import Carousel from "./components/Carousel";
 import CompanionCard from "./components/CompanionCard";
+
+// CSS
 import "./styles/Applications.css";
 
 function Applications() {
@@ -69,19 +73,19 @@ function Applications() {
       requests: user.requests.map((request) =>
         request.taskName === selectedRequest.taskName
           ? {
-            ...request,
-            status: "in-progress",
-            applications: [
-              ...(request.applications || []).filter(
-                (a) => a.companionEmail !== updatedApplication.companionEmail
-              ),
-              updatedApplication,
-            ],
-            location: {
-              lng: -122.950891, // location.lng
-              lat: 49.215401, // location.lat
+              ...request,
+              status: "in-progress",
+              applications: [
+                ...(request.applications || []).filter(
+                  (a) => a.companionEmail !== updatedApplication.companionEmail
+                ),
+                updatedApplication,
+              ],
+			  location: {
+				lng: -122.950891, // location.lng
+				lat: 49.215401, // location.lat
+			  }
             }
-          }
           : request
       ),
     };

@@ -1,8 +1,16 @@
+// React imports
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
+// Components
 import WhiteInput from "./components/WhiteInput";
 import RadioButton from "./components/RadioButton";
 import YellowButton from "./components/YellowButton";
+
+// CSS
+import "./styles/Create.css";
+
+// Logos
 import nameLogo from "./images/name.png";
 import ethnicityLogo from "./images/ethnicity.png";
 import ageLogo from "./images/age.png";
@@ -11,7 +19,6 @@ import femaleLogo from "./images/girl.png";
 import maleLogo from "./images/boy.png";
 import otherLogo from "./images/other.png";
 import preLogo from "./images/pre.png";
-import "./styles/Create.css";
 
 function Create() {
   const [successMessage, setSuccessMessage] = useState("");

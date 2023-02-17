@@ -5,12 +5,11 @@ import YellowButton from './YellowButton';
 
 import "../styles/JobCard.css";
 
-
 function JobCard({ email, taskName, requester, age, gender, ethnicity, phonenumber, details, difficulty, onButtonClick }) {
   const navigate = useNavigate();
 
-  const handleGetDirectionsClick = () => {
-    onButtonClick(email);
+  const handleViewDetailsClick = () => {
+    onButtonClick(email, taskName);
   };
 
   return (
@@ -26,8 +25,8 @@ function JobCard({ email, taskName, requester, age, gender, ethnicity, phonenumb
         <h3>Details:</h3>
         <p>{details}</p>
       </div>
-      <YellowButton onClick={handleGetDirectionsClick}>
-        Get Directions
+      <YellowButton onClick={handleViewDetailsClick}>
+        View
       </YellowButton>
     </div>
   );

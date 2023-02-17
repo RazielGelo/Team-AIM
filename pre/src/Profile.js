@@ -1,11 +1,17 @@
-
+// React imports
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
+// Components
 import WhiteInput from "./components/WhiteInput";
 import YellowButton from "./components/YellowButton";
 import RadioButton from "./components/RadioButton";
 import Nav from "./components/Nav";
+
+// CSS
 import "./styles/Profile.css";
+
+// Logos
 import nameLogo from "./images/name.png";
 import ethnicityLogo from "./images/ethnicity.png";
 import ageLogo from "./images/age.png";
@@ -21,22 +27,16 @@ function Profile() {
 
   let navigate = useNavigate();
 
-  const [user, setUser] = useState({
-    email: "",
-    password: "",
-    name: "",
-    ethnicity: "",
-    age: "",
-    gender: "",
-    phoneNumber: "",
-  });
+  const session = JSON.parse(localStorage.getItem("session")) || {};
+
+  const [user, setUser] = useState({ ...session });
 
   useEffect(() => {
     if (successMessage) {
       setShowSuccessMessage(true);
       setTimeout(() => {
         setShowSuccessMessage(false);
-        return navigate("/");
+        return navigate("/home");
       }, 3000);
     }
   }, [successMessage, navigate]);
@@ -68,20 +68,34 @@ function Profile() {
       setErrorMessage("Please enter your name.");
       return;
     }
-
+    if (/\d/.test(user.name)) {
+      setShowErrorMessage(true);
+      setErrorMessage("Name must not contain numbers.");
+      return;
+    }
     if (!user.ethnicity) {
       setShowErrorMessage(true);
       setErrorMessage("Please enter your ethnicity.");
       return;
     }
+    if (/\d/.test(user.ethnicity)) {
+      setShowErrorMessage(true);
+      setErrorMessage("Ethnicity must not contain numbers.");
+      return;
+    }
     if (!user.age) {
       setShowErrorMessage(true);
-      setErrorMessage(`Please your age.`);
+      setErrorMessage(`Please enter your age.`);
+      return;
+    }
+    if (isNaN(user.age)) {
+      setShowErrorMessage(true);
+      setErrorMessage(`Age must be a number.`);
       return;
     }
     if (!user.gender) {
       setShowErrorMessage(true);
-      setErrorMessage(`Please select your gender".`);
+      setErrorMessage(`Please select your gender.`);
       return;
     }
     if (!user.phoneNumber) {
@@ -99,33 +113,30 @@ function Profile() {
     }
 
     const accounts = JSON.parse(localStorage.getItem("accounts")) || [];
-    const session = JSON.parse(localStorage.getItem("session")) || {};
-    const filteredAccounts = accounts.filter(
-      (account) => account.email !== session.email
-    );
-    const updatedUser = {
-      email: user.email,
-      password: user.password,
-      name: user.name,
-      ethnicity: user.ethnicity,
-      gender: user.gender,
-      age: user.age,
-      phoneNumber: user.phoneNumber,
-      requests: [],
-      jobs: [],
-    };
-    filteredAccounts.push(updatedUser);
-    localStorage.setItem("accounts", JSON.stringify(filteredAccounts));
-    localStorage.setItem(
-      "session",
-      JSON.stringify({
-        email: updatedUser.email,
-        password: updatedUser.password,
-      })
-    );
-    setShowSuccessMessage(true);
-    setErrorMessage("");
-    setSuccessMessage("Edit profile successful!");
+const session = JSON.parse(localStorage.getItem("session")) || {};
+const filteredAccounts = accounts.filter(
+  (account) => account.email !== session.email
+);
+
+const currentUser = accounts.find((account) => account.email === session.email);
+const updatedUser = {
+  ...currentUser,
+  email: user.email,
+  password: user.password,
+  name: user.name,
+  ethnicity: user.ethnicity,
+  gender: user.gender,
+  age: user.age,
+  phoneNumber: user.phoneNumber,
+};
+
+filteredAccounts.push(updatedUser);
+localStorage.setItem("accounts", JSON.stringify(filteredAccounts));
+localStorage.setItem("session", JSON.stringify(updatedUser));
+setShowSuccessMessage(true);
+setErrorMessage("");
+setSuccessMessage("Edit profile successful!");
+
   };
 
   const validatePhoneNumber = (phoneNumber) => {
@@ -138,9 +149,7 @@ function Profile() {
       <Nav />
       <div className="profile-sub1">
         <h3 id="ref">YOUR PROFILE</h3>
-        <p>
-          You can view or edit your profile here and also log out.
-        </p>
+        <p>You can view or edit your profile here and also log out.</p>
         {showErrorMessage && <p id="create-error-message">{errorMessage}</p>}
         {showSuccessMessage && (
           <p id="create-success-message">{successMessage}</p>
@@ -148,7 +157,7 @@ function Profile() {
         <WhiteInput
           type="text"
           value={user.name}
-          onChange={(e) => setUser({ ...user, familyNickname: e.target.value })}
+          onChange={(e) => setUser({ ...user, name: e.target.value })}
           placeholder="Name"
           logo={nameLogo}
         />
@@ -162,7 +171,7 @@ function Profile() {
         <WhiteInput
           type="text"
           value={user.age}
-          onChange={(e) => setUser({ ...user, ethnicity: e.target.value })}
+          onChange={(e) => setUser({ ...user, age: e.target.value })}
           placeholder="Age"
           logo={ageLogo}
         />

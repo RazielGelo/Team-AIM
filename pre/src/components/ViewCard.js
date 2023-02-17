@@ -10,7 +10,7 @@ function Card({ email, taskName, difficulty, details, onButtonClick }) {
   const navigate = useNavigate();
 
   const handleViewDetailsClick = () => {
-    onButtonClick(email);
+    onButtonClick(email, taskName);
   };
 
   return (

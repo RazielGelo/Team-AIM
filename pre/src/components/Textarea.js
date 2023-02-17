@@ -11,7 +11,7 @@ const TextArea = ({ placeholder, rows, cols, onChange, value, disabled }) => {
         cols={cols}
         value={value}
         onChange={onChange}
-        disabled={disabled}
+		disabled={disabled}
       />
     </div>
   );

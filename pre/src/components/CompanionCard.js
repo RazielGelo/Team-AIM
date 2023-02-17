@@ -17,9 +17,9 @@ function CompanionCard({ email, name, age, ethnicity, phonenumber, description, 
     <div className="CompanionCard">
       <h2>{name}</h2>
       <p>Age: {age}</p>
-      <p>Ethnicity: {ethnicity}</p>
-      <p>Phonenumber: {phonenumber}</p>
-      <p>Fee: {fee}</p>
+	  <p>Ethnicity: {ethnicity}</p>
+	  <p>Phonenumber: {phonenumber}</p>
+	  <p>Fee: {fee}</p>
       <div className="details">
         <h3>Description:</h3>
         <p>{description}</p>
