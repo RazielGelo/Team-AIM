@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0957ac;
+
+  font-family: "Saira Condensed";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.home-container .Nav {
+  display: flex;
+}
+
+.home-sub1 {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #000; */
+  color: #fff;
+  font-size: 32px;
+  margin-left: 150px;
+  margin-top: 25px;
+}
+
+.home-sub1 p {
+  /* background-color: red; */
+  margin-right: 50px;
+}
+
+.home-sub1 .InputSearch {
+  /* background-color: green; */
+  margin-top: 30px;
+  margin-right: 50px;
+}
+
+.home-sub2 {
+  width: 100vw;
+  height: 50vh;
+  /* background-color: #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.home-carousel {
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+}

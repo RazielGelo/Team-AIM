@@ -6,6 +6,7 @@ import Login from "./Login";
 import Register from "./Register";
 import Request from "./Request";
 import YourRequests from "./YourRequests";
+import Home from "./Home";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route exact path="/create" element={<Create />} />
       <Route exact path="/request" element={<Request />} />
       <Route exact path="/yourrequests" element={<YourRequests />} />
+      <Route exact path="/home" element={<Home />} />
       </Router>
 
   );

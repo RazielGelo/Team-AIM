@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap');
+
+
+.InputSearch {
+  width: 600px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: #fff;
+
+  margin-bottom: 30px;
+}
+
+.InputSearch img {
+  width: auto;
+  height: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.InputSearch input {
+  flex-grow: 1;
+  outline: none;
+  border: none;
+  padding: 0px;
+  background-color: #fff;
+  color: black;
+
+  font-family: 'Saira Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.InputSearch input::placeholder {
+  color: black;
+}
+
+.InputSearch input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
