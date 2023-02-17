@@ -67,6 +67,9 @@ const Login = () => {
     <div className="login-container">
       <div className="login-inner">
         <div className="login-sub1">
+          <div className="login-sub3">
+            <img src={preLogo} alt="PRE" />
+          </div>
           <h3>LOGIN</h3>
           {showErrorMessage && <p id="error-message">{errorMessage}</p>}
           {showSuccessMessage && <p id="success-message">{successMessage}</p>}
