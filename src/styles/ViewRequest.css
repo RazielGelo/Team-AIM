@@ -49,3 +49,40 @@
 	/* background-color: #000; */
 	justify-content: space-between;
 }
+
+@media screen and (max-width: 800px) {
+	.viewRequest-sub1 {
+		width: 100%;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+
+		margin-left: 0px;
+		margin-top: 0px;
+	}
+
+	.viewRequest-sub1 h1 {
+		font-size: 60px;
+		color: #F4D35E;
+		margin: 0px;
+		margin-bottom: 20px;
+	}
+
+	.viewRequest-sub1 p {
+		font-size: 25px;
+		margin-top: 0px;
+		margin-bottom: 5px;
+	}
+
+	.viewRequest-sub1 p span {
+		color: #F4D35E;
+	}
+
+	.viewRequest-buttons {
+		display: flex;
+		width: 350px;
+		margin-top: 10px;
+		/* background-color: #000; */
+		justify-content: space-between;
+	}
+}

@@ -108,4 +108,8 @@
   #success-message {
     font-size: 16px;
   }
+
+  .register-sub1 .WhiteInput{
+    width: 300px;
+  }
 }

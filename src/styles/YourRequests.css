@@ -46,3 +46,41 @@
   justify-content: space-around;
   align-items: space-around;
 }
+
+@media screen and (max-width: 800px) {
+
+
+
+  .yourRequests-sub1 {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #000; */
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  .yourRequests-sub1 h1 {
+    font-size: 50px;
+    color: #F4D35E;
+    margin: 0px;
+  }
+
+  .yourRequests-sub2 {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #000; */
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  .yourRequests-carousel {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+  }
+}

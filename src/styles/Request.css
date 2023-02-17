@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
 
 .request-container {
-  width: 100vw;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #0957ac;
+	width: 100vw;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #0957ac;
 
-  font-family: "Saira Condensed";
-  font-style: normal;
-  font-weight: 400;
-  padding-bottom: 50px;
+	font-family: "Saira Condensed";
+	font-style: normal;
+	font-weight: 400;
+	padding-bottom: 50px;
 }
 
 .request-sub1 {
@@ -22,7 +22,7 @@
 	/* background-color: #fff; */
 	margin-top: 10px;
 	width: 700px;
-	height: auto;	
+	height: auto;
 
 }
 
@@ -67,9 +67,9 @@
 	border-radius: 20px;
 	overflow: hidden;
 	position: relative;
-  }
-  
-  .dropdown select {
+}
+
+.dropdown select {
 	width: 100%;
 	height: 100%;
 	border: none;
@@ -79,9 +79,9 @@
 	-moz-appearance: none;
 	padding-left: 15px;
 	font-size: 20px;
-  }
-  
-  .dropdown::after {
+}
+
+.dropdown::after {
 	content: "";
 	width: 0;
 	height: 0;
@@ -91,4 +91,110 @@
 	position: absolute;
 	top: 25px;
 	right: 25px;
-  }
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		width: 100%;
+		height: 100%;
+	}
+
+	.WhiteInput {
+		width: 180%;
+	}
+
+	.request-container {
+		width: 100vw;
+		height: 120%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: #0957ac;
+
+		font-family: "Saira Condensed";
+		font-style: normal;
+		font-weight: 400;
+	}
+
+	.request-sub1 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* background-color: #fff; */
+		margin-top: 10px;
+		width: 100px;
+		height: auto;
+	}
+
+	.request-sub1 h3 {
+		height: 100px;
+		font-size: 74px;
+		color: #F4D35E;
+		margin: 0px;
+	}
+
+	.request-sub1 p {
+		margin: 0px;
+		font-size: 20px;
+		color: #fff;
+		margin-bottom: 20px;
+		text-align: center;
+		width: 300px;
+	}
+
+	.request-sub1 .YellowButton {
+		margin-top: 30px;
+	}
+
+	.difficulty {
+		display: flex;
+		height: auto;
+		width: 350px;
+		margin-bottom: 30px;
+		align-items: center;
+		margin-left: -30px;
+    
+	}
+
+	.difficulty p {
+		font-size: 20px;
+		margin-right: 50px;
+		margin-top: 10px;
+	}
+
+	.dropdown {
+		width: 300px;
+		height: 60px;
+		border-radius: 20px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.dropdown select {
+		width: 100%;
+		height: 100%;
+		border: none;
+		background-color: #fff;
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		padding-left: 15px;
+		font-size: 20px;
+	}
+
+	.dropdown::after {
+		content: "";
+		width: 0;
+		height: 0;
+		border-left: 12px solid transparent;
+		border-right: 12px solid transparent;
+		border-top: 15px solid #000;
+		position: absolute;
+		top: 25px;
+		right: 25px;
+	}
+
+	.request-sub1 .WhiteInput {
+		width: 300px;
+	}
+}

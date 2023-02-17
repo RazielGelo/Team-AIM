@@ -39,3 +39,11 @@
 
   }
 
+	@media screen and (max-width: 800px) {
+		.JobCard {
+			width: 320px;
+			height: 400px;
+			margin-left: 20px	;
+		}
+	}
+

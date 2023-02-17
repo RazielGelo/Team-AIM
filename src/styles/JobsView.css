@@ -80,7 +80,7 @@
 
 [role="tooltip"].popup-content {
   width: auto;
-  box-shadow: #ef86f2 5px 5px 5px;
+  box-shadow: #fff200 5px 5px 5px;
 }
 
 .popup-overlay {
@@ -89,4 +89,68 @@
 
 [data-popup="tooltip"].popup-overlay {
   background: transparent;
+}
+
+@media screen and (max-width: 800px) {
+  .jobsview-sub1 {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #000; */
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  .jobsview-sub1 h1 {
+    font-size: 60px;
+    color: #f4d35e;
+    margin: 0px;
+  }
+
+  .jobsview-sub1 p {
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+
+  .jobsview-sub1 p span {
+    color: #f4d35e;
+  }
+
+  .jobsview-buttons {
+    display: flex;
+    width: 350px;
+    margin-top: 60px;
+    /* background-color: #000; */
+    justify-content: space-between;
+
+  }
+
+  .jobsview-buttons button {
+    width: 150px;
+    height: 38px;
+    color: #2777cd;
+    background-color: #f4d35e;
+    border-radius: 45px;
+    border: none;
+    cursor: pointer;
+
+    font-family: "Saira Condensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .popupContent {
+    margin: auto;
+    width: auto;
+    padding: 0px;
+    overflow: hidden;
+  }
+
+
+
 }

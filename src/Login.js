@@ -95,7 +95,7 @@ const Login = () => {
           <YellowButton onClick={handleSubmit}>Login</YellowButton>
         </div>
         <div className="login-sub2">
-          <img src={preLogo} alt="playdate" />
+          <img src={preLogo} alt="pre" />
         </div>
       </div>
     </div>

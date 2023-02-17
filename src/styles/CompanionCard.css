@@ -38,3 +38,11 @@
 	color: #fff;
 
   }
+
+	@media screen and (max-width: 800px) {
+		.CompanionCard {
+			width: 320px;
+			height: 400px;
+			margin-left: 20px;
+		}
+	}

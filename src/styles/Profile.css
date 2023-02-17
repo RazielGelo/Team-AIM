@@ -11,7 +11,7 @@
   font-family: "Saira Condensed";
   font-style: normal;
   font-weight: 400;
-  padding-bottom: 50px;
+  padding-bottom: 200px;
 }
 
 .profile-sub1 {
@@ -28,7 +28,7 @@
 
 .profile-sub1 h3 {
 	height: 100px;
-	font-size: 74px;
+	font-size: 60px;
 	color: #F4D35E;
 	margin: 0px;
 
@@ -76,4 +76,15 @@
 	align-items: flex-start;
 	/* background-color: #000; */
 
+}
+
+@media only screen and (max-width: 800px) {
+	.profile-container {
+		height: auto;
+		padding-bottom: 225px;
+	}
+   .WhiteInput {
+		width: 50%;
+	 }
+	
 }
